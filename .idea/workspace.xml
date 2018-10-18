@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bdd2cd27-1a8b-4b51-9730-34e9a4822f51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core-banking/src/main/java/com/kian/AxonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankAccountCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankTransferManagementSaga.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parent/src/main/java/AxonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parent/src/main/java/DistributedConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/BankAccountDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/BankTransferDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/DepositDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/WithdrawalDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankTransferController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankAccountCommandHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/org/axonframework/samples/bank/command/BankAccountCommandHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/org/axonframework/samples/bank/command/BankTransferManagementSagaTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/org/axonframework/samples/bank/command/BankTransferTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/src/main/java/org/axonframework/samples/bank/query/bankaccount/BankAccountEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/src/main/java/org/axonframework/samples/bank/query/bankaccount/BankAccountEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/src/main/java/org/axonframework/samples/bank/query/bankaccount/BankAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/src/main/java/org/axonframework/samples/bank/query/banktransfer/BankTransferEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/src/main/java/org/axonframework/samples/bank/query/banktransfer/BankTransferEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query/src/main/java/org/axonframework/samples/bank/query/banktransfer/BankTransferRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/AxonBankApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/AxonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/DistributedConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/WebSocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/web/BankAccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/web/BankTransferController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/web/dto/BankAccountDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/web/dto/BankTransferDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/web/dto/DepositDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/web/dto/WithdrawalDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application-distributed.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/controllers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/modals/bankTransfersModal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/modals/createBankAccountModal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/modals/depositMoneyModal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/modals/transferMoneyModal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/modals/withdrawMoneyModal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/app/services.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/index.html" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/core-api/target/" />
+    <ignored path="$PROJECT_DIR$/web/target/" />
+    <ignored path="$PROJECT_DIR$/core/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/query/target/" />
+    <ignored path="$PROJECT_DIR$/eureka-server/target/" />
+    <ignored path="$PROJECT_DIR$/employee-zuul-service/target/" />
+    <ignored path="$PROJECT_DIR$/employee-producer-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/eureka-employee-consumer-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/core-banking/target/" />
+    <ignored path="$PROJECT_DIR$/query-banking/target/" />
+    <ignored path="$PROJECT_DIR$/web-banking/target/" />
+    <ignored path="$PROJECT_DIR$/parent/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="11368132">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="39" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="39" />
+          <entry key="properties" value="4" />
+          <entry key="xml" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="39" />
+          <entry key="JAVA" value="39" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="4" />
+          <entry key="XML" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="189" />
+          <entry key="properties" value="25" />
+          <entry key="xml" value="50" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="189" />
+          <entry key="Properties" value="25" />
+          <entry key="XML" value="50" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1320565761">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="74" />
+          <entry key="properties" value="6" />
+          <entry key="xml" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="74" />
+          <entry key="Properties" value="6" />
+          <entry key="XML" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="19" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="19" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="13" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="axon-bank" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/SpringBootHelloWorldApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/AxonConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parent/src/main/java/AxonConfig.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parent/src/main/java/DistributedConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core-banking/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1160">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-banking/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2755">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/query-banking/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>commandBus</find>
+      <find>DestinationBankAccountNotFoundEvent</find>
+      <find>devto</find>
+      <find>lomb</find>
+      <find>BankAccount</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web/pom.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSagaMiror.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankAccountCommandHandler.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/AxonBankApplication.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/SpringCloudAutoConfiguration.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/DistributedAutoConfiguration.java" />
+        <option value="$PROJECT_DIR$/web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/employee-producer-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-employee-consumer-zuul/src/main/java/bank/AxonBankApplication.java" />
+        <option value="$PROJECT_DIR$/eureka-employee-consumer-zuul/src/main/java/config/AxonConfig.java" />
+        <option value="$PROJECT_DIR$/eureka-employee-consumer-zuul/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/eureka-employee-consumer-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-employee-consumer-zuul/src/main/java/com/javainuse/SpringBootHelloWorldApplication.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/com/kian/bank/command/BankAccountCommandHandler.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/DistributedConfiguration.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/AxonConfig.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/AxonConfig.java" />
+        <option value="$PROJECT_DIR$/core-banking/pom.xml" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/command/BankAccountCommandHandler.java" />
+        <option value="$PROJECT_DIR$/query-banking/pom.xml" />
+        <option value="$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferRepository.java" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/com/kian/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/com/kian/bank/AxonBankApplication.java" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/BankAccountCommandHandler.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankTransferController.java" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankAccountController.java" />
+        <option value="$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountEventListener.java" />
+        <option value="$PROJECT_DIR$/query-banking/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/command/BankAccountCommandHandler.java" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/command/BankAccount.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/com/kian/DistributedConfiguration.java" />
+        <option value="$PROJECT_DIR$/web-banking/pom.xml" />
+        <option value="$PROJECT_DIR$/web-banking/src/main/java/com/kian/config/AxonConfig.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankAccount.java" />
+        <option value="$PROJECT_DIR$/core-banking/src/main/java/com/kian/AxonConfig.java" />
+        <option value="$PROJECT_DIR$/parent/src/main/java/DistributedConfiguration.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="616" />
+    <option name="y" value="539" />
+    <option name="width" value="1440" />
+    <option name="height" value="826" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="parent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="parent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="parent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="axon-bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AxonBank spring cloude" type="462c0819:PsiDirectoryNode" />
+              <item name="web-banking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538050040621" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Rule engin/rulebook/build.gradle" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kian" />
+      <recent name="org.axonframework.samples.bank.command" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/parent/src/main/java" />
+      <recent name="$PROJECT_DIR$/core-banking/src/main/java/com/kian" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/web-banking/src/main/java" />
+      <recent name="$PROJECT_DIR$/web-banking/src/main/java/com/kian" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBootHelloWorldApplication (3)">
+    <configuration name="AxonBankApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axon-bank-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.axonframework.samples.bank.AxonBankApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.javainuse.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootHelloWorldApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="axon-bank-query (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kian.SpringBootHelloWorldApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootHelloWorldApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="axon-bank-web (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kian.SpringBootHelloWorldApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootHelloWorldApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="employee-consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kian.SpringBootHelloWorldApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootHelloWorldApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="employee-producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kian.SpringBootHelloWorldApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootHelloWorldApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="employee-producer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kian.SpringBootHelloWorldApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootHelloWorldApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="employee-consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kian.SpringBootHelloWorldApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AxonBankApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.SpringBootHelloWorldApplication" />
+      <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (1)" />
+      <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (2)" />
+      <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (3)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (3)" />
+        <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (2)" />
+        <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (1)" />
+        <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (2)" />
+        <item itemvalue="Spring Boot.SpringBootHelloWorldApplication (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdd2cd27-1a8b-4b51-9730-34e9a4822f51" name="Default Changelist" comment="" />
+      <created>1538030398795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538030398795</updated>
+      <workItem from="1538030402623" duration="13695000" />
+      <workItem from="1538045408597" duration="4740000" />
+      <workItem from="1538204498350" duration="599000" />
+      <workItem from="1538294996752" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19056000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="616" y="539" width="1440" height="826" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910071" visible="true" weight="0.38387573" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.50089926" side_tool="true" weight="0.2784048" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32953683" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25208807" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.29840547" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32118452" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3644647" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.2928994" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32994732" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" sideWeight="0.50089926" side_tool="true" weight="0.2784048" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49910071" weight="0.2780286" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32118452" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32953683" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.34624144" />
+      <window_info active="true" anchor="bottom" id="Debug" order="10" visible="true" weight="0.58694" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.21632807" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32994732" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankAccountCommandHandler.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankAccountCommandHandler.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/axonframework/axon-core/3.0.4/axon-core-3.0.4.jar!/org/axonframework/commandhandling/distributed/DistributedCommandBus.class</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/axonframework/axon-core/3.0.4/axon-core-3.0.4.jar!/org/axonframework/commandhandling/distributed/DistributedCommandBus.class</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/axonframework/axon-core/3.1.1/axon-core-3.1.1.jar!/org/axonframework/commandhandling/gateway/AbstractCommandGateway.class</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/axonframework/axon-core/3.1.1/axon-core-3.1.1.jar!/org/axonframework/commandhandling/distributed/DistributedCommandBus.class</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java</url>
+          <line>84</line>
+          <properties class="org.axonframework.samples.bank.command.BankTransferManagementSaga">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/core/src/main/java/org/axonframework/samples/bank/command/BankTransferManagementSaga.java</url>
+          <line>97</line>
+          <properties class="org.axonframework.samples.bank.command.BankTransferManagementSaga">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/DistributedConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/AxonConfig.java" />
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/WebSocketConfig.java" />
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/bank/command/BankAccount.java" />
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/AxonBankApplication.java" />
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/axonframework/samples/bank/config/AxonConfig.java" />
+    <entry file="file://$PROJECT_DIR$/core/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/command/BankTransfer.java" />
+    <entry file="file://$PROJECT_DIR$/query/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/query-banking/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/java/com/kian/banktransfer/BankTransferEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core-api/src/main/java/org/axonframework/samples/bank/api/banktransfer/BankTransferCreatedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/WebSocketConfig.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/config/WebSocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/SpringBootHelloWorldApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/bank/AxonBankApplication.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/config/DistributedConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/BankAccountDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/BankTransferDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/DepositDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/dto/WithdrawalDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/BankAccount.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/BankTransferManagementSaga.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/BankTransfer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kian/SpringBootHelloWorldApplication.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/command/BankAccount.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/BankAccountCommandHandler.java" />
+    <entry file="file://$PROJECT_DIR$/parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankTransferController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/java/com/kian/bankaccount/BankAccountEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="33" column="118" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/command/BankTransferManagementSaga.java" />
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/DistributedConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/command/BankAccountCommandHandler.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/command/BankAccount.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/config/AxonConfig.java" />
+    <entry file="file://$PROJECT_DIR$/parent/src/main/java/com/kian/SpringBootHelloWorldApplication.java" />
+    <entry file="file://$PROJECT_DIR$/web-banking/src/main/java/com/kian/web/BankAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/SpringBootHelloWorldApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/AxonConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parent/src/main/java/AxonConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parent/src/main/java/DistributedConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core-banking/src/main/java/com/kian/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core-banking/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-banking/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2755">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-banking/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>axon-bank</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
